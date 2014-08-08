@@ -76,5 +76,13 @@ puts '
 puts "\n" + "Anything you can show us? ".green
 question_eight = gets.chomp.to_s
 
-`cd /Users/zickel/projects/scriba` && `bin/rails server &`
+user = `whoami`.chomp
+@path = "/Users/#{user}/projects/scriba"
+
+job = fork do
+  exec "#{@path}/bin/rails server"
+end
+
+Process.detach(job)
+
 `open http://localhost:3000/transcriptions`
