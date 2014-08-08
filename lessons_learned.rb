@@ -3,15 +3,6 @@
 
  
 require_relative 'lib/colors'
- 
-puts "this is red".red
-puts "this is blue".blue
-puts "this is green".green
-puts "this is yellow".yellow
-puts "this is purple".purple
-puts "this is cyan".cyan
-puts "this is lightgray".lightgray
-puts "this is white"
 
 
 puts "Which class did you take this week? ".green
@@ -34,9 +25,10 @@ question_six = gets.chomp.to_s
 
 puts "\n" + "Ohhhhh, good. As Wayne says: Every time you code in PHP, God kills a kitten. ".green
 question_seven = gets.chomp.to_s
+puts ''
 
 puts "\n" + "Anything you can show us? ".green
 question_eight = gets.chomp.to_s
 
-`cd /Users/zickel/projects/scriba` && `bin/rails server &`
+`cd /Users/zickel/projects/CATS` && `bin/rails server &`
 `open http://localhost:3000/transcriptions`
